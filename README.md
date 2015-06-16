@@ -1,5 +1,3 @@
-# curriculum-developing-bc-player
-
 # Materials for Developing with Brightcove Player Session
 
 ## Latest Materials
