@@ -29,7 +29,7 @@
   <script type="text/javascript">
     var myPlayer;
 
-    videojs("myPlayerID").ready(function () {
+    videojs("myPlayerID").on('loadedmetadata',function(){
       myPlayer = this;
       myPlayer.play();
     });

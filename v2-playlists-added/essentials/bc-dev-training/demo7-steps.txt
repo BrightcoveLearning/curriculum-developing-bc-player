@@ -1,32 +1,38 @@
-1. View the video with Dev Tool, right click on the Big Play Button and show the "path" of the selector
-2. In the style block style the button color and opacity
-    #myPlayerID .vjs-big-play-button {
-      background-color: #B37D5B;
-      opacity: .6;
-    }
-3. Browse and see the changes to the button
-4. Add the styles to center the button
-      top: 0px;
-      left: 0px;
-      right: 0px;
-      bottom: 0px;
-      margin: auto;
-3. Browse and see the changes to the button
+1. Create a player
+2. In Setting enable player to use playlists - publish
+3. From Media module associate a playlist with newly created player
+4. Copy in-page code and paste in empty HTML page
+5. Create <ol> with vjs-playlist class
+6. Style
 
 
 ***Core Code***
+
   <style type="text/css">
-    #myPlayerID .vjs-big-play-button {
-      background-color: #B37D5B;
-      opacity: .6;
-      top: 0px;
-      left: 0px;
-      right: 0px;
-      bottom: 0px;
-      margin: auto;
-    }
     .video-js {
-      width: 480px;
-      height: 270px;
+      float: left;
+      margin: 15px;
+      width: 640px;
+      height: 380px;
+    }
+    .vjs-playlist {
+      width: 250px;
+      float: left;
+      margin: 15px;
     }
   </style>
+
+</head>
+
+<body>
+
+  <video
+    data-playlist-id="1323984733001"
+    data-account="921483702001"
+    data-player="c517d6aa-c198-469b-92c4-6944d80dd143"
+    data-embed="default"
+    class="video-js" controls></video>
+
+  <ol class="vjs-playlist"></ol>
+
+  <script src="//players.brightcove.net/921483702001/c517d6aa-c198-469b-92c4-6944d80dd143_default/index.min.js"></script>
