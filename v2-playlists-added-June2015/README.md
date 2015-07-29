@@ -12,4 +12,5 @@
 	* Guides, Samples and Solutions page
 	* API
 	* Root of exercises
+	* Studio
 	
