@@ -21,15 +21,15 @@
     data-account="921483702001"
     data-player="a5f0f07c-ce3b-48a4-af02-f5f6c38546ac"
     data-embed="default"
-    data-video-id=""
+    data-video-id="4036854518001"
     class="video-js" controls></video>
 
   <script src="//players.brightcove.net/921483702001/a5f0f07c-ce3b-48a4-af02-f5f6c38546ac_default/index.min.js"></script>
 
   <script src="//players.brightcove.net/videojs-overlay/lib/videojs-overlay.js"></script>
-  
+
   <script type="text/javascript">
-    videojs("myPlayerID").ready(function(){
+    videojs("myPlayerID").on('loadedmetadata',function(){
       var myPlayer = this;
       myPlayer.overlay({
         "content": "<strong>Default overlay content</strong>",
@@ -48,10 +48,9 @@
           "align": "bottom-left"
         }]
       });
-      myPlayer.play();
     });
-  </script> 
-    
+  </script>
+
 </body>
 
 </html>

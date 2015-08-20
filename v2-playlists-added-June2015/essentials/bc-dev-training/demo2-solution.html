@@ -13,11 +13,11 @@
 </head>
 
 <body>
-  <video id="myPlayerID" 
-    data-account="921483702001" 
-    data-player="a5f0f07c-ce3b-48a4-af02-f5f6c38546ac" 
+  <video id="myPlayerID"
+    data-account="921483702001"
+    data-player="a5f0f07c-ce3b-48a4-af02-f5f6c38546ac"
     data-embed="default"
-    data-video-id="" 
+    data-video-id="4036854518001"
     class="video-js" controls></video>
 
   <p><button onclick="changeVideo()">change video</button></p>
@@ -33,7 +33,7 @@
     });
 
     function changeVideo() {
-      myPlayer.catalog.getVideo('922656010001', function (error, video) {
+      myPlayer.catalog.getVideo('3742256818001', function (error, video) {
         console.log("error", error)
         myPlayer.catalog.load(video);
         myPlayer.play();

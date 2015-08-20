@@ -13,11 +13,11 @@
 </head>
 
 <body>
-  <video id="myPlayerID" 
-    data-account="921483702001" 
-    data-player="a5f0f07c-ce3b-48a4-af02-f5f6c38546ac" 
-    data-embed="default" 
-    data-video-id="" 
+  <video id="myPlayerID"
+    data-account="921483702001"
+    data-player="a5f0f07c-ce3b-48a4-af02-f5f6c38546ac"
+    data-embed="default"
+    data-video-id="3742256818001"
     class="video-js" controls></video>
   <br />
 
@@ -29,13 +29,13 @@
     videojs("myPlayerID").ready(function () {
       var myPlayer = this,
         dynamicHTML;
-      myPlayer.catalog.getVideo('922656010001', function (error, video) {
+      myPlayer.catalog.getVideo('3742256818001', function (error, video) {
         console.log("error", error)
         myPlayer.catalog.load(video);
         console.log("mediainfo after load: ", myPlayer.mediainfo);
         dynamicHTML = "<p>Video Title: <strong>" + myPlayer.mediainfo.name + "</strong></p>";
-        dynamicHTML += "<p>Description: <strong>" + myPlayer.mediainfo.description + "</strong></p>";      
-        document.getElementById("textTarget").innerHTML = dynamicHTML;      
+        dynamicHTML += "<p>Description: <strong>" + myPlayer.mediainfo.description + "</strong></p>";
+        document.getElementById("textTarget").innerHTML = dynamicHTML;
         myPlayer.play();
       })
     });
