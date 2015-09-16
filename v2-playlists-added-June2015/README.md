@@ -9,7 +9,7 @@
 * Open slides
 * Get folder open in Sublime Text
 * In browser open
-	* Guides, Samples and Solutions page
+	* Index page of player docs
 	* API
 	* Root of exercises
 	* Studio
