@@ -10,16 +10,22 @@
 
 
 ***Core Code***
-  <iframe src='//players.brightcove.net/921483702001/a5f0f07c-ce3b-48a4-af02-f5f6c38546ac_default/index.html' allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
+  <iframe src="//players.brightcove.net/921483702001/NJB3JCBqe_default/index.html?videoId=4036854518001"
+    allowfullscreen
+    webkitallowfullscreen
+    mozallowfullscreen></iframe>
 
   <p><button onclick="changeVideo()">change video</button></p>
 
   <!-- custom script -->
   <script type="text/JavaScript">
-    var iframeTag = document.getElementsByTagName("iframe")[0],
-      newVideo = "?videoId=922656010001";
 
     function changeVideo() {
-      iframeTag.src += newVideo;
+      var iframeTag = document.getElementsByTagName("iframe")[0],
+        newVideo = "?videoId=3742256815001",
+        theSrc = iframeTag.src,
+        srcWithoutVideo = theSrc.substring( 0, theSrc.indexOf( "?" ) ),
+        newSrc = srcWithoutVideo + newVideo;
+      iframeTag.src = newSrc;
     }
   </script>
