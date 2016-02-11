@@ -14,25 +14,25 @@
 
 <body>
   <video id="myPlayerID"
+    data-video-id="4036854518001"
     data-account="921483702001"
-    data-player="a5f0f07c-ce3b-48a4-af02-f5f6c38546ac"
+    data-player="NJB3JCBqe"
     data-embed="default"
-    data-video-id="3742256818001"
-    class="video-js" controls></video>
+    class="video-js"
+    controls></video>
+
   <br />
 
   <div id="textTarget"></div>
 
-  <script src="//players.brightcove.net/921483702001/a5f0f07c-ce3b-48a4-af02-f5f6c38546ac_default/index.min.js"></script>
+  <script src="//players.brightcove.net/921483702001/NJB3JCBqe_default/index.min.js"></script>
 
   <script type="text/javascript">
     videojs("myPlayerID").ready(function () {
       var myPlayer = this,
         dynamicHTML;
-      myPlayer.catalog.getVideo('3742256818001', function (error, video) {
-        console.log("error", error)
-        myPlayer.catalog.load(video);
-        console.log("mediainfo after load: ", myPlayer.mediainfo);
+      myPlayer.on('loadstart',function() {
+        console.log("mediainfo: ", myPlayer.mediainfo);
         dynamicHTML = "<p>Video Title: <strong>" + myPlayer.mediainfo.name + "</strong></p>";
         dynamicHTML += "<p>Description: <strong>" + myPlayer.mediainfo.description + "</strong></p>";
         document.getElementById("textTarget").innerHTML = dynamicHTML;
