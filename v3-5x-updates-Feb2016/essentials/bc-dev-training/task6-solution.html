@@ -3,16 +3,19 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Demo 3</title>
+  <title>Task 6</title>
+
   <style type="text/css">
     .video-js {
       width: 480px;
       height: 270px;
     }
   </style>
+  <link href="//players.brightcove.net/videojs-ima3/2/videojs.ima3.min.css" rel="stylesheet">
 </head>
 
 <body>
+
   <video id="myPlayerID"
     data-video-id="4036854518001"
     data-account="921483702001"
@@ -23,22 +26,16 @@
 
   <script src="//players.brightcove.net/921483702001/NJB3JCBqe_default/index.min.js"></script>
 
+  <script src="//players.brightcove.net/videojs-ima3/2/videojs.ima3.min.js"></script>
   <script type="text/javascript">
-    var myPlayer;
-
-    videojs("myPlayerID").on('loadedmetadata',function(){
-      myPlayer = this;
-      myPlayer.play();
+    videojs("myPlayerID").ready(function(){
+      var myPlayer = this;
+      myPlayer.ima3({
+        serverUrl: "http://solutions.brightcove.com/bcls/brightcove-player/vmap/simple-vmap.xml"
+      });
     });
-
-    function changeVideo() {
-      myPlayer.catalog.getVideo('3742256818001', function (error, video) {
-        console.log("error", error)
-        myPlayer.catalog.load(video);
-        myPlayer.play();
-      })
-    }
   </script>
+
 </body>
 
 </html>
