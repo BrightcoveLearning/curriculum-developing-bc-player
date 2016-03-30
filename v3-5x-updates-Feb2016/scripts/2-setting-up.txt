@@ -1,0 +1,26 @@
+(title slide)
+I want to take just a minute to be sure you have an environment ready to begin doing your development with Brightcove Player.
+
+(setup slide)
+Here is a list of the basics you will need.
+
+First is a Video Cloud account, and by the way a trial account will work.
+
+You will also need some kind of editor in which to write code. You will see I use Atom from GitHub, but any editor will do.
+
+If you are going to test using the iframe implementation of the player, which we will discuss later, you will need a local web server. XAMPP and WAMP are free options. I will be using WAMP.
+
+(session materials slide)
+If you want to use the student files we utilize during this course, you can get them out on GitHub. Here you see the URL to the GitHub repo, as well as a bitly, shortened version. Be sure to get the latest version as I do revise the materials occaisionally.
+
+(Brightcove Player documentation slide)
+Another key element in getting ready to do development is knowing the location of the documentation. There are two basic kinds of documentation for Brightcove Player, the standard docs and API docs.
+
+(show player doc index page)
+This is the home page for Brightcove Player documentation. Here we have various kinds of content, from conceptual overviews to feature how-tos and samples.
+
+(show general player API page)
+The other kind of documentation are the API docs. These docs are built dynamically from the actual source code of the player, and updated regularly. These docs show the properties, methods and events for classes that make up the player.
+
+(show player specific API)
+For instnace, here in the actual Player class API. You see what you would most likely expect, like a method for play and an event for when the video has ended.

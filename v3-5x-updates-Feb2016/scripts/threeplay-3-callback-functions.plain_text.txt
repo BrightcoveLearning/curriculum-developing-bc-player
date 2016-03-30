@@ -1,0 +1,11 @@
+Now another thing that we have to understand are these callbacks. Again, this is standard JavaScript technique. It's not something particular to Brightcove. But it's really good thing we have this callback functionality in JavaScript that the engineers have put in. 
+
+So for instance, there's a method called getVideo. And if I ask a question-- and it usually confuses people because there's not a good answer, and that's kind of what I want to do. If I said OK, how long is it going to take to get the video to your computer or device? And the answer is it depends. And that is exactly why we have to have a callback function. 
+
+What happens when I do getVideo, this function in here is not called until the video is returned. So actually I'm a remote employee. I actually live very near Tampa, Florida. I have a super fast internet connection. And so I get that video back really quickly. Whereas if I'm on a phone with bad connectivity, I'm going to get that video back much more slowly. 
+
+So I can't say, well let's wait two seconds. Because it may be a few hundredths of a second, or it may be 10 seconds. So no matter how long it takes, this function is not called until the video gets returned. 
+
+Now, there's two ways to handle this. One of them-- and again, this is not Brightcove specific. This is standard JavaScript implementation or techniques. We have an anonymous function where we define the function right after where we call the function, or inside where we call the function. So that's called an anonymous function. 
+
+And then something you're probably more used to, either a function expression or declaration. We can name the function, and we can do it this way, or function on getVideo. And I actually have, in the materials list that you get, I point to an article about why you want to use an expression versus a declaration. But don't worry about that for now. That's just kind of interesting JavaScript. 

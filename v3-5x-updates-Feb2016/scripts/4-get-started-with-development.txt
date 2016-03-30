@@ -1,0 +1,17 @@
+I'm browsing to Video Cloud Studio. In the Players Module I am going to create a new player and name it.
+
+I can see details for this player by clicking on the name. We'll be looking at some of these options in later videos.
+
+Let's publish a video in our new player. I will go to the Media module, select a video, then click publish.
+
+It is easy to forget the player with which you want to publish the video, so choose the correct player. I'm going to copy the advanced code (which is the non-iframe implementation), then go to my editor.
+
+Here are the student files you can download if you wish. What you'll see in the student files, for every task, are three files. So here's you're starting file, which in this case is just a blank HTML page. I'm going to paste the player code in here. The next file details the steps you need to perform to complete the task on which we are working. The last file for each task is the solution, which is the finished product. That's what we have for each task, a starting file, the steps to accomplish the task, and then the result from following the steps.
+
+Let's look at what code we pasted into our blank HTML page. The first tag was the video tag, and also a script tag. The video tag is pretty straight forward as to what it does. The script that is loaded is created as part of the player creation for this process. If you have changed anything in the player properties page, those changes would be reflected in the script file. The API is also part of the minified JavaScript file.
+
+I'm going to add an ID here, because we have to have an ID to get a reference to the video element. I'm going to use myPlayerID for the ID. And that's so we can talk to the player later in JavaScript. And now what we want to do is issue the play method. When the video loads it's going to play right away. I know there are other ways to get the video to play immediately, but this is a good, clear first task to complete.
+
+Let's get started by first inserting a <script> block. In the script block we'll use the videojs() method to change the generic video element into a Brightcove Player. By the way, the videojs method is part of the imported JavaScript file.
+
+Before we use the play() method, we have to be sure the video is loaded and ready to play. Again, we are working in an event driven environment, so we will wait for the loadedmetadata event. After this event is dispatched, we know we can play the video. We'll use the on() method to associate a dispatched event with a callback function that acts as an event handler for us.
