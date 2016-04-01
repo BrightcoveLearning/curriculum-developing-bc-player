@@ -60,4 +60,6 @@ And as we see, the event is dispatched very frequently.
 
 Now we are going to use some slides for a quick review and to look at some other code we will use later.
 
-Part of the code shown here we have seen, and that is creating a variable to hold a reference to the player. We are using a different event, and different syntax to get to that varialbe assignment. It is SO common to need to wait for the player to be ready to interact with special syntax was written for that. That is using the ready method
+Part of the code shown here we have seen, and that is creating a variable to hold a reference to the player. We are using a different event, and different syntax to get to that varialbe assignment. It is SO common to need to wait for the player to be ready to interact with special syntax was written for that. That is using the ready method, which under the hood can also be thought of as a special kind of event.
+
+Why not use ready() 
