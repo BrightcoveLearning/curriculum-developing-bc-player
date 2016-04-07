@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Task 6</title>
+  <title>Solution 5</title>
+
+   <link href="//players.brightcove.net/videojs-overlay/1/videojs-overlay.css" rel='stylesheet'>
 
   <style type="text/css">
     .video-js {
@@ -11,7 +13,6 @@
       height: 270px;
     }
   </style>
-  <link href="//players.brightcove.net/videojs-ima3/2/videojs.ima3.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -26,12 +27,26 @@
 
   <script src="//players.brightcove.net/921483702001/NJB3JCBqe_default/index.min.js"></script>
 
-  <script src="//players.brightcove.net/videojs-ima3/2/videojs.ima3.min.js"></script>
+  <script src="//players.brightcove.net/videojs-overlay/1/videojs-overlay.min.js"></script>
+
   <script type="text/javascript">
-    videojs("myPlayerID").ready(function(){
+    videojs('myPlayerID').ready(function(){
       var myPlayer = this;
-      myPlayer.ima3({
-        serverUrl: "http://solutions.brightcove.com/bcls/brightcove-player/vmap/simple-vmap.xml"
+
+      myPlayer.on('loadstart',function(){
+        var groups = '',
+          numTags = myPlayer.mediainfo.tags.length;
+        for (var i = 0; i < numTags; i++) {
+          groups += myPlayer.mediainfo.tags[i] + ' ';
+        }
+        myPlayer.overlay({
+          "overlays": [{
+            "content": "<span style='background-color:black'>For similar videos see the groups: <br /><strong>" + groups + "</strong></span>",
+            "start": "play",
+            "end": 4,
+            "align": "bottom-left"
+          }]
+        });
       });
     });
   </script>
