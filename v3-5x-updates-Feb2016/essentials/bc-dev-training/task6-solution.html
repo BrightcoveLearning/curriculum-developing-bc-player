@@ -34,11 +34,8 @@
       var myPlayer = this;
 
       myPlayer.on('loadstart',function(){
-        var groups = '',
-          numTags = myPlayer.mediainfo.tags.length;
-        for (var i = 0; i < numTags; i++) {
-          groups += myPlayer.mediainfo.tags[i] + ' ';
-        }
+        var groups = myPlayer.mediainfo.tags;
+        groups = groups.join(', ');
         myPlayer.overlay({
           "overlays": [{
             "content": "<span style='background-color:black'>For similar videos see the groups: <br /><strong>" + groups + "</strong></span>",
