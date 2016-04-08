@@ -1,8 +1,8 @@
 1. Create a player
-2. In Setting enable player to use playlists - publish
+2. In Settings enable player to use playlists - publish
 3. From Media module associate a playlist with newly created player
 4. Copy in-page code and paste in empty HTML page
-5. Create <ol> with vjs-playlist class
+5. Move <ol> with vjs-playlist class
 6. Style
 
 
@@ -13,12 +13,12 @@
       float: left;
       margin: 15px;
       width: 640px;
-      height: 380px;
+      height: 365px;
     }
     .vjs-playlist {
-      width: 250px;
       float: left;
-      margin: 15px;
+      width: 250px;
+      height: 348px;
     }
   </style>
 
