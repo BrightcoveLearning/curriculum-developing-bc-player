@@ -8,19 +8,19 @@
 
 ***Core Code***
 
-  <style type="text/css">
-    .video-js {
-      float: left;
-      margin: 15px;
-      width: 640px;
-      height: 365px;
-    }
-    .vjs-playlist {
-      float: left;
-      width: 250px;
-      height: 348px;
-    }
-  </style>
+<style type="text/css">
+  .video-js {
+    float: left;
+    margin: 15px;
+    width: 640px;
+    height: 365px;
+  }
+  .vjs-playlist {
+    float: left;
+    width: 250px;
+    height: 348px;
+  }
+</style>
 
 </head>
 
