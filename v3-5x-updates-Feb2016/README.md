@@ -8,6 +8,7 @@
 * Start web server
 * Open slides
 * Get folder open in Sublime Text
+* Open files in TextWrangler
 * In browser open
 	* Index page of player docs
 	* API
