@@ -35,6 +35,7 @@
       myPlayer.catalog.getVideo('3742256818001', function (error, video) {
         console.log("error", error)
         myPlayer.catalog.load(video);
+        myPlayer.muted(true);
         myPlayer.play();
       })
     }

@@ -36,6 +36,7 @@
         dynamicHTML = "<p>Video Title: <strong>" + myPlayer.mediainfo.name + "</strong></p>";
         dynamicHTML += "<p>Description: <strong>" + myPlayer.mediainfo.description + "</strong></p>";
         document.getElementById("textTarget").innerHTML = dynamicHTML;
+        myPlayer.muted(true);
         myPlayer.play();
       })
     });

@@ -28,6 +28,7 @@
   <script type="text/javascript">
     videojs("myPlayerID").on('loadedmetadata',function(){
       var myPlayer = this;
+      myPlayer.muted(true);
       myPlayer.play();
     });
   </script>

@@ -7,6 +7,7 @@
 7. Use videojs' loadedmetadata to create block for startup code
   videojs("myPlayerID").on('loadedmetadata',function(){
     var myPlayer = this;
+    myPlayer.muted(true);
     myPlayer.play();
   });
 8. In the block, assign the player instance to a variable named myPlayer
@@ -56,6 +57,7 @@ OPTIONAL - Only if ahead of schedule
   <script type="text/javascript">
     videojs("myPlayerID").on('loadedmetadata',function(){
       var myPlayer = this;
+      myPlayer.muted(true);
       myPlayer.play();
       myPlayer.on("timeupdate",showUpdate);
     });

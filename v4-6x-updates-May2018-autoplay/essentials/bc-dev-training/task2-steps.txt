@@ -10,6 +10,7 @@
 4. Log error, load video and play video in function
         console.log("error", error)
         myPlayer.catalog.load(video);
+        myPlayer.muted(true);
         myPlayer.play();
 
 
@@ -33,6 +34,7 @@
 
     videojs("myPlayerID").on('loadedmetadata',function(){
       myPlayer = this;
+      myPlayer.muted(true);
       myPlayer.play();
     });
 
@@ -40,6 +42,7 @@
       myPlayer.catalog.getVideo('922656010001', function (error, video) {
         console.log("error", error)
         myPlayer.catalog.load(video);
+        myPlayer.muted(true);
         myPlayer.play();
       })
     }

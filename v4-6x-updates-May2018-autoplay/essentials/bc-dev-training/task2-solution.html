@@ -30,6 +30,7 @@
 
     videojs("myPlayerID").on('loadedmetadata',function(){
       myPlayer = this;
+      myPlayer.muted(true);
       myPlayer.play();
     });
 
