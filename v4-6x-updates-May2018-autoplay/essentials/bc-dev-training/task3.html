@@ -26,7 +26,7 @@
   <script type="text/javascript">
     var myPlayer;
 
-    videojs("myPlayerID").on('loadedmetadata',function(){
+    videojs.getPlayer('myPlayerID').on('loadedmetadata',function(){
       myPlayer = this;
       myPlayer.play();
     });

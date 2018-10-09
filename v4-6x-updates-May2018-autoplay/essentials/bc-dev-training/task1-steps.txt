@@ -5,7 +5,7 @@
 5. Add an id to video tag with value of myPlayerID
 6. Add a script block below existing script tag
 7. Use videojs' loadedmetadata to create block for startup code
-  videojs("myPlayerID").on('loadedmetadata',function(){
+  videojs.getPlayer('myPlayerID').on('loadedmetadata',function(){
     var myPlayer = this;
     myPlayer.muted(true);
     myPlayer.play();
@@ -55,7 +55,7 @@ OPTIONAL - Only if ahead of schedule
   <script src="//players.brightcove.net/921483702001/NJB3JCBqe_default/index.min.js"></script>
 
   <script type="text/javascript">
-    videojs("myPlayerID").on('loadedmetadata',function(){
+    videojs.getPlayer('myPlayerID').on('loadedmetadata',function(){
       var myPlayer = this;
       myPlayer.muted(true);
       myPlayer.play();

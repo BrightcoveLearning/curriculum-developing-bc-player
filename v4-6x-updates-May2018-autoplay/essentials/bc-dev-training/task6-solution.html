@@ -30,7 +30,7 @@
   <script src="//players.brightcove.net/videojs-overlay/1/videojs-overlay.min.js"></script>
 
   <script type="text/javascript">
-    videojs('myPlayerID').ready(function(){
+    videojs.getPlayer('myPlayerID').ready(function(){
       var myPlayer = this;
 
       myPlayer.on('loadstart',function(){

@@ -17,19 +17,19 @@
 
 <!--  No audio track video: 5793330982001 -->
 
-  <video id="myPlayerID"
+  <video-js id="myPlayerID"
     data-video-id="5785633544001"
     data-account="921483702001"
     data-player="NJB3JCBqe"
     data-embed="default"
     class="video-js"
-    controls></video>
+    controls></video-js>
 
   <script src="//players.brightcove.net/921483702001/NJB3JCBqe_default/index.min.js"></script>
 
   <script type="text/javascript">
-    var myPlayer = videojs.getPlayer('myPlayerID');
-    myPlayer.ready(function() {
+    videojs.getPlayer('myPlayerID').ready(function() {
+      var myPlayer =this;
       myPlayer.muted(true);
       myPlayer.play();
       myPlayer.on("timeupdate",showUpdate);

@@ -42,7 +42,7 @@
 <script src="//players.brightcove.net/videojs-overlay/lib/videojs-overlay.js"></script>
 
 <script type="text/javascript">
-  videojs("myPlayerID").on('loadedmetadata',function(){
+  videojs.getPlayer('myPlayerID').on('loadedmetadata',function(){
     var myPlayer = this;
     myPlayer.overlay({
       "content": "<strong>Default overlay content</strong>",
