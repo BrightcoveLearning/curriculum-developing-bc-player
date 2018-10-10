@@ -4,12 +4,12 @@
 3. The player code on the page  need not change
 
 ***Core Code***
-  <video id="myPlayerID"
+  <video-js id="myPlayerID"
     data-video-id="4036854518001"
     data-account="921483702001"
     data-player="NJB3JCBqe"
     data-embed="default"
     class="video-js"
-    controls></video>
+    controls></video-js>
 
   <script src="//players.brightcove.net/921483702001/NJB3JCBqe_default/index.min.js"></script>
