@@ -12,7 +12,7 @@
 * In browser open
 	* Index page of player docs
 	* Index page of player samples
-	* API (copy BCL-developer-docs/brightcove-player/current-release to BCL-LearningSamples)
+	* API (Open file:///Users/mboles/git/BCL-developer-docs/brightcove-player/current-release/index.html)
 	* Root of exercises
 	* Studio
 	
