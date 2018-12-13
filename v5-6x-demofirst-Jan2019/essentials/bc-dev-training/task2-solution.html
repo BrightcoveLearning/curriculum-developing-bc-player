@@ -28,10 +28,12 @@
   <script type="text/javascript">
     var myPlayer;
 
-    videojs.getPlayer('myPlayerID').on('loadedmetadata',function(){
+    videojs.getPlayer('myPlayerID').ready(function(){
       myPlayer = this;
       myPlayer.muted(true);
-      myPlayer.play();
+      myPlayer.on('loadedmetadata', function(){
+        myPlayer.play();
+      });
     });
 
     function changeVideo() {

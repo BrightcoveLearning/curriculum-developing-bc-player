@@ -31,7 +31,9 @@
     videojs.getPlayer('myPlayerID').ready(function() {
       var myPlayer =this;
       myPlayer.muted(true);
-      myPlayer.play();
+      myPlayer.on('loadedmetadata', function(){
+        myPlayer.play();
+      });
       myPlayer.on("timeupdate",showUpdate);
     });
 

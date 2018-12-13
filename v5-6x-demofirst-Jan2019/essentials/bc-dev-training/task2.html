@@ -26,10 +26,12 @@
   <script src="//players.brightcove.net/921483702001/NJB3JCBqe_default/index.min.js"></script>
 
   <script type="text/javascript">
-    videojs.getPlayer('myPlayerID').on('loadedmetadata',function(){
+    videojs.getPlayer('myPlayerID').ready(function(){
       var myPlayer = this;
       myPlayer.muted(true);
-      myPlayer.play();
+      myPlayer.on('loadedmetadata', function(){
+        myPlayer.play();
+      });
     });
   </script>
 
