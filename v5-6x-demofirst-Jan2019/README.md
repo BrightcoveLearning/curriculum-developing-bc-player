@@ -14,5 +14,5 @@
 	* Index page of player samples
 	* API Docs
 	* Root of exercises
-	* Studio
+	* Studio (Developer Training account)
 	
