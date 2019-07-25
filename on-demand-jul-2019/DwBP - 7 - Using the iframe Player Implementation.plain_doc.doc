@@ -1,0 +1,57 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/omml/2004/12/core" xmlns:ve="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o12="http://schemas.microsoft.com/office/2004/7/core" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/3/wordprocessingDrawing" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/3/main" xmlns="http://www.w3.org/TR/REC-html40">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <head>
+    <style>style</style>
+  </head>
+  <body>
+    <div class="Section1">
+      <p>
+        <b>
+          <u>
+            <span style="font-size:20.0pt">DwBP - 7 - Using the iframe Player Implementation</span>
+          </u>
+        </b>
+      </p>
+      <p>
+      </p>
+      <p>
+In the last two tasks, we've written code to meet a couple of use cases where we use the advanced, or what I'd like to call end page embed implementation of the player where the video tag and the associated script is together on the HTML page. In this lesson, we're going to go through and we're going to use the iframe player implementation. We're going to see what it looks like. We're going to talk about the advantages and disadvantages of using the iframe.       </p>
+      <p>
+Our use case this time is very similar to something we've done earlier with the end page embed, and that is we're going to write some code where we can change the video that's playing in the player based upon user interaction. In this case it's just going to be a simple button. It could be a select box the user chooses from, however you'd like to present that option.       </p>
+      <p>
+Let's go into the Media module and see how we can get the iframe player implementation code. I'm in the media module and I'm going to pick a video I want to publish, click the publish button here, and of course we want to pick the correct player. And here we see the standard color, which you could also think of as the iframe implementation. And that's the code we're going to be using.       </p>
+      <p>
+So you can go ahead and we'll copy this. Now rather than going to the normal editor I've been using, Atom, I'm going to jump right into the CodePen. Here is our page in the CodePen, and of course we have the iframe right here. And we've also added a button for the user to click when they want to change the video. And again, we're going to call, just like we did before, we're going to call the change video function.       </p>
+      <p>
+Here is a CSS that changes the size of the player. In this case, we're using the iframe selector. We're going to grab the iframe element and change the size. Remember, before we use the video JS class selector. And here's a JavaScript. The JavaScript actually doesn't use anything from the player API. This is basically some string manipulation. And in essence, what we're going to do is we're going to remove this string from our source for the iframe, and we're going to replace it with the new one that has a new video ID. And then we do that, the iframe tag will reload and we'll see the video change.       </p>
+      <p>
+First thing I'm going to do is go through and get a handle, a reference to the iframe tag. And we're going to use get elements by tag name, and that actually returns an array. And that's why this square bracket zero is here. Even though there's only one, we still need to say, hey, we want the zero-th one.       </p>
+      <p>
+Here's a string called new video that simply is the new query stream. It's the video ID property with a new video assign. We grabbed from the iframe tag, the SRC. So that's the whole string. We remove the query string using the substring JavaScript method, and we say go find the question mark and remove everything after that. And then we simply create another variable where we add the string without the query string and the new query string together.       </p>
+      <p>
+That give me a little complex. So what I've done is in the console here I'm going to display the SRC without the video, and also the new video so we can see that. You can actually turn on the console. I want make this a larger, come down here, bring this up. And I need to click the change video button, and there we see our two variables, SRC without the video. And just as I said, there's the URL but without the query string. Here's the new query string, and then we add those two together and put it back into the iframe tag assigning at the source.       </p>
+      <p>
+So let's see it in action here. I'm going to close the console. Refresh the page since I clicked the button. I do not have play going by default. If you wanted both of these to autoplay, you could simply set autoplay in studio. So I'm going to start this one playing. I'm going to click change the video. There's the new video, and I can click play. Again, if you wanted them both to play automatically, simply go into studio and for this player set start video automatically to true.       </p>
+      <p>
+So there's the code that takes care of the use case we have in this section, this task we've accomplished, and that is using the iframe implementation and as well, changing the video based upon user interaction. Let's take a couple minutes now that we're somewhat familiar with the iframe implementation to talk about some good and bad things about the iframe and a few other details, and also some review.       </p>
+      <p>
+First of all, the advantages of iframe player. Number one, there will be no collisions with existing JavaScript and/or CSS. So it's possible if you haven't handled your JavaScript in an elegant manner, you could have conflict simply by-- perhaps you have the same name for different functionality in two different places and you bring them together and now change video is defined in two places. That cannot happen when you're using an iframe player. It's nearly automatically responsive. You just have to go in and make sure that your width and height are set to percentages.       </p>
+      <p>
+And then another nice thing about the iframe implementations is that it travels nicely to other social media apps. So if you want to share a video like in Facebook or on Twitter, it will use the iframe implementation to do that.       </p>
+      <p>
+There are some times when you have to be careful about using the iframe implementation. One of those is code in the containing page needs to listen for or act on player events. So for instance, before we had some code in the player and we wanted something to happen, like display some text in the HTML page, based upon the load start event. That you can't do with an iframe implementation.       </p>
+      <p>
+Also if you want to pull styles in and affect your player based on styles from the containing page, you won't be able to do that. And also, there may be times where it simply won't fit your application logic. For instance, let's say at the end of a video or at a call to action you want to change the page you're on. Well if you have that logic in the iframe, the page will change, but all that will change is in the iframe. And so you'll be in the new page just in the iframe, and all the surrounding HTML page will be the same. So there's good things and bad things about using the iframe player.       </p>
+      <p>
+Here's a quick review of what we did. You see we have this query string that is part of the source and we removed that and replace it. Here's a high level list of what we did. And here's a resulting code based upon that list, and we can see that the substring JavaScript method is used to extract the character.       </p>
+      <p>
+I probably made it seem like there's no way to communicate between the HTML page and the iframe. Actually, you can, but it can be a little difficult. I've written one sample out here where play the video from the iframe parent when using an iframe, but I have the play video button here and when I play that, you can see that start the video. What this uses, again, is not part of the Brightcove player API, but JavaScript post message. So this is how you can send message in. You actually have the iframe listen for an event that comes in, and you can then send information in there.       </p>
+      <p>
+So this case, I sent a note saying, hey, when you hear this, click from the outer page, go ahead and play the video. So you can do it, but it can be challenging.       </p>
+      <p>
+All right, so we have accomplished another task. And what we've done is we've changed the video in an iframe player implementation. And we know we did a click on a button and then we used some string manipulation basically to change the video that was playing.       </p>
+      <p>
+Next, we're going to use a great feature of Brightcove player call plug-ins. And there are some plug-ins that are supplied by Brightcove, and then also you can create your own plug-ins. See you soon.       </p>
+    </div>
+  </body>
+</html>
