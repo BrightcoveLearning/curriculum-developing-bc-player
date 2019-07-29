@@ -22,20 +22,18 @@
 
 ***Core Code***
   <video-js id="myPlayerID"
+    data-video-id="4036854518001"
     data-account="921483702001"
-    data-player="default"
+    data-player="NJB3JCBqe"
     data-embed="default"
-    controls=""
-    data-video-id="5793330982001"
-    data-playlist-id=""
-    data-application-id=""
-    width="640" height="360"></video-js>
+    class="video-js"
+    controls></video-js>
 
   <br />
 
   <div id="textTarget"></div>
 
-  <script src="https://players.brightcove.net/921483702001/default_default/index.min.js"></script>
+  <script src="//players.brightcove.net/921483702001/NJB3JCBqe_default/index.min.js"></script>
 
   <script type="text/javascript">
     videojs.getPlayer('myPlayerID').ready(function () {
@@ -48,7 +46,7 @@
         document.getElementById("textTarget").innerHTML = dynamicHTML;
         myPlayer.muted(true);
         myPlayer.play();
-      });
+      })
     });
 
   </script>
