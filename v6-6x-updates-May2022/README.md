@@ -7,8 +7,8 @@
 * Copy exercise files to BCL-LearningSamples
 * Start web server
 * Open slides
-* Get folder open in Atom
-* Open files in TextWrangler
+* Get folder open in VSC
+* Open files in Sublime
 * In browser open
 	* Index page of player docs
 	* Index page of player samples
