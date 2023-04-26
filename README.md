@@ -2,4 +2,4 @@
 
 ## Latest Materials
 
-The latest materials are in the **v6-6x-updates-May2022** folder
+The latest materials are in the **v1-7x-updates-April2023** folder
