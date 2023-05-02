@@ -2,8 +2,8 @@
   Developer Training
   BC Player Dev Training with Overlay - DO NOT DELETE Copy
 2. Copy Overlay Plugin's CSS and JavaScript into HTML page
-   <link href="https://players.brightcove.net/videojs-overlay/2/videojs-overlay.css" rel='stylesheet'>
-   <script src="https://players.brightcove.net/videojs-overlay/2/videojs-overlay.min.js"></script>
+   <link href="https://players.brightcove.net/videojs-overlay/3/videojs-overlay.css" rel='stylesheet'>
+   <script src="https://players.brightcove.net/videojs-overlay/3/videojs-overlay.min.js"></script>
 3. Call overlay and pass in options
       myPlayer.overlay({
         "content": "<strong>Default overlay content</strong>",
